@@ -19,11 +19,12 @@ Data is sent and received, between the Android application and the Web server, a
 ## Dedication
 This major project is dedicated to my university professors for their crucial involvement in my career as a Computer Scientist.
 
- - [Mr Edgar Jembere](http://computerscience.ukzn.ac.za/Staff1/EdgarJembere.aspx)
- - [Mr Luke Voster](http://computerscience.ukzn.ac.za/Staff1/LukeVorster.aspx)
+ - [Mr. Edgar Jembere](http://computerscience.ukzn.ac.za/Staff1/EdgarJembere.aspx)
+ - [Mr. Luke Voster](http://computerscience.ukzn.ac.za/Staff1/LukeVorster.aspx)
  - [Prof. Serestina Viriri](http://computerscience.ukzn.ac.za/Staff1/SerestinaViriri.aspx)
+ - [Mr. Anban Pillay](http://computerscience.ukzn.ac.za/Staff1/AnbanPillay.aspx)
  - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NzQ1OTExMV19
+eyJoaXN0b3J5IjpbNjM3MTExMzI1XX0=
 -->
