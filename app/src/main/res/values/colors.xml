@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Default colors-->
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--project-frome colors-->
+    <!--AppBar and StatusBar colors-->
+    <color name="app_bar">#39af78</color>
+    <color name="status_bar">#39af78</color>
+    <color name="app_bar_text_color">#2E4053</color>
+    <!--Loading page colors-->
+    <color name="loading_page_background">#39AF78</color>
+    <color name="loading_page_text_color">#2E4053</color>
+</resources>

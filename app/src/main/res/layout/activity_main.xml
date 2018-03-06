@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lp_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loading_page_background"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/lp_linear_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/general_layout_padding"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loading_page_logo_marginTop"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_loading_page_icon"
+            android:contentDescription="@string/loading_page_image_description"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loading_page_title_marginTop"
+            android:textColor="@color/loading_page_text_color"
+            android:textSize="@dimen/loading_page_title"
+            android:textAlignment="center"
+            android:text="@string/loading_page_title"
+            />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loading_page_subtitle_marginTop"
+            android:textColor="@color/loading_page_text_color"
+            android:textSize="@dimen/loading_page_subtitle"
+            android:textAlignment="center"
+            android:text="@string/loading_page_subtitle"
+            />
+
+        <com.ldoublem.loadingviewlib.view.LVGearsTwo
+            android:id="@+id/lp_load_view"
+            android:layout_height="@dimen/loading_page_load_icon_height"
+            android:layout_width="@dimen/loading_page_load_icon_width"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loading_page_load_marginTop"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/loading_page_text_color"
+            android:text="@string/loading_page_load_text"
+            />
+
+        <!--[Optional] This can be removed if you'd prefer not to have it-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/loading_page_footer_marginTop"
+            android:textColor="@color/loading_page_text_color"
+            android:textAlignment="center"
+            android:text="@string/loading_page_footer"
+            />
+    </LinearLayout>
+</FrameLayout>

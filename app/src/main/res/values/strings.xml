@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Project-Frome</string>
+
+    <string name="loading_page_title">Project-Frome</string>
+    <string name="loading_page_subtitle">Open-Source Online Shopping Platform</string>
+    <string name="loading_page_load_text">Loading</string>
+    <!--optional-->
+    <string name="loading_page_footer">
+        Project-Frome is an open-source online shopping platform. This default application
+        showcases the applications features. The aim of this project is to make the implementation
+        of an Android online store as simple as possible, leaving you with the fun and important
+        job of starting, and growing, your online business.
+    </string>
+
+    <!--Image content description-->
+    <string name="loading_page_image_description">*loading page image*</string>
+
+    <!--DO NOT USE!!!! FOR DEVELOPMENT ONLY-->
+    <string name="next_activity_toast">Next Activity</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--DP dimens-->
+    <dimen name="general_layout_padding">16dp</dimen>
+
+    <dimen name="loading_page_title_marginTop">20dp</dimen>
+    <dimen name="loading_page_subtitle_marginTop">10dp</dimen>
+
+    <dimen name="loading_page_logo_marginTop">20dp</dimen>
+
+    <dimen name="loading_page_load_icon_width">100dp</dimen>
+    <dimen name="loading_page_load_icon_height">100dp</dimen>
+    <dimen name="loading_page_load_marginTop">45dp</dimen>
+
+    <dimen name="loading_page_footer_marginTop">45dp</dimen>
+
+    <!--SP dimens-->
+    <dimen name="loading_page_title">40sp</dimen>
+    <dimen name="loading_page_subtitle">20sp</dimen>
+</resources>

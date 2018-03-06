@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="LoadingPageTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/app_bar</item>
+    </style>
+
+</resources>
