@@ -19,8 +19,9 @@ Data is sent and received, between the Android application and the Web server, a
 ## Dedication
 This major project is dedicated to my university professors for their crucial involvement in my career as a Computer Scientist.
 
- - List item
+ - [Mr Edgar Jembere](http://computerscience.ukzn.ac.za/Staff1/EdgarJembere.aspx)
+ - [Mr Luke Vo](http://computerscience.ukzn.ac.za/Staff1/LukeVorster.aspx)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDI0MjEyNTBdfQ==
+eyJoaXN0b3J5IjpbLTE0MDM0NDEwMzZdfQ==
 -->
