@@ -17,8 +17,8 @@ Data is sent and received, between the Android application and the Web server, a
 
 ----------
 ## Dedication
-This major project is dedicated to my university professors for their crutial involvment i
+This major project is dedicated to my university professors for their crutial involvment in 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NzU4OTk1OF19
+eyJoaXN0b3J5IjpbMTA2OTAwMzUyOF19
 -->
