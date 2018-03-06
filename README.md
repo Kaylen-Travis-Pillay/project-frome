@@ -24,8 +24,7 @@ This major project is dedicated to my university professors for their crucial in
  - [Prof. Serestina Viriri](http://computerscience.ukzn.ac.za/Staff1/SerestinaViriri.aspx)
  - [Mr. Anban Pillay](http://computerscience.ukzn.ac.za/Staff1/AnbanPillay.aspx)
  - Mr. Barrie Kelly
- - 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTkxNjUxMTddfQ==
+eyJoaXN0b3J5IjpbMTkyMDc5MjYyMF19
 -->
