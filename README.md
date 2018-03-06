@@ -13,3 +13,6 @@ Above is a simple diagram illustrating my initial solution design for the projec
 **NOTE:** My choice of web server backend technologies and databases could be swapped out with your own choice. The underlying concept will remain the same.
 
 Data is sent and received, between the Android application and the Web server, as JSON [[javaScript Object Notation]](https://www.json.org/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTg1MjkzOTA1Nl19
+-->
