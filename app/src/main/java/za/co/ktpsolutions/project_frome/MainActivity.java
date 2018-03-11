@@ -34,22 +34,37 @@ import android.widget.Toast;
 
 import com.ldoublem.loadingviewlib.view.LVGearsTwo;
 
+import java.lang.ref.WeakReference;
+
+import es.dmoral.toasty.Toasty;
+
+/*
+    The MainActivity in the project performs the initial loading of the application.
+    This gives the application the opportunity to load or perform any setup that you
+    as the developer want. If you have no setup, the this activity can serve as a
+    splash screen, or possibly removed altogether.
+
+    The two major libraries used in this activity are:
+        1. LoadingView (https://github.com/ldoublem/LoadingView)
+        2. Toasty (https://github.com/GrenderG/Toasty)
+
+    The docs (view link adjacent to library name) for these libraries gives you an
+    insight into the use of them and ways in which you can customise the default
+    usage within this project.
+ */
 public class MainActivity extends Activity {
 
     //Static variables
     private static final int LOAD_DURATION = 5000;
     private static final String TAG = "LoadingActivity-:";
 
-    //Private variables
-    private LVGearsTwo lp_load_view;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Get reference to LVCircularJump view
-        lp_load_view = findViewById(R.id.lp_load_view);
+        //Get reference to LVGearTwo view
+        LVGearsTwo lp_load_view = findViewById(R.id.lp_load_view);
     }
 
     @Override
@@ -57,7 +72,7 @@ public class MainActivity extends Activity {
         super.onStart();
 
         //Start LoadingAsyncThread task to perform loading
-        new LoadingAsyncThread().execute();
+        new LoadingAsyncThread(this).execute();
     }
 
     /*
@@ -71,7 +86,13 @@ public class MainActivity extends Activity {
         *   project will pause the thread for 5 seconds to mimic background code
         *   running, which essentially is your custom loading/setup code.
         */
-    private class LoadingAsyncThread extends AsyncTask<Void, Void, Void>{
+    private static class LoadingAsyncThread extends AsyncTask<Void, Void, Void>{
+
+        private WeakReference<MainActivity> activity_reference;
+
+        LoadingAsyncThread(MainActivity context){
+            activity_reference = new WeakReference<>(context);
+        }
 
         @Override
         protected void onPreExecute() {
@@ -79,7 +100,13 @@ public class MainActivity extends Activity {
 
             // Perform some action before the background code runs.
             // By default the project will start the loading animation.
-            lp_load_view.startAnim();
+
+            MainActivity activity = activity_reference.get();
+            if(activity!=null && !activity.isFinishing()){
+                //Get a reference to the loading icon and start the animation.
+                LVGearsTwo lp_load_view = activity.findViewById(R.id.lp_load_view);
+                lp_load_view.startAnim();
+            }
 
             //TODO: Implement your custom code here
         }
@@ -112,17 +139,30 @@ public class MainActivity extends Activity {
             // Perform some action after the background task has completed
             // it's execution. By default the project stops the animation and
             // moves to the authentication phase/intent of the project.
-            lp_load_view.stopAnim();
-            moveToNextPhase();
+
+            MainActivity activity = activity_reference.get();
+            if(activity!=null && !activity.isFinishing()){
+                //Get reference to loading icon and stop the animation
+                LVGearsTwo lp_load_view = activity.findViewById(R.id.lp_load_view);
+                lp_load_view.stopAnim();
+                //Execute moveToNextPhase on the currently active activity
+                activity.moveToNextPhase();
+            }
 
             //TODO: Implement your custom code here
         }
     }
 
     private void moveToNextPhase(){
-        Toast.makeText(this,
-                getText(R.string.next_activity_toast),
-                Toast.LENGTH_SHORT)
+        // moveToNextPhase moves to application to the next phase of the project.
+        // By default the project moves to the authentication phase of the project.
+        // The toast that is displayed after loading gives attribution to the
+        // original developer and can be removed
+
+        Toasty.info(this
+                , getText(R.string.developer_attribution)
+                ,Toast.LENGTH_SHORT
+                ,true)
                 .show();
 
         //TODO: Implement your custom here

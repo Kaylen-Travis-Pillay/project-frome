@@ -17,4 +17,5 @@
 
     <!--DO NOT USE!!!! FOR DEVELOPMENT ONLY-->
     <string name="next_activity_toast">Next Activity</string>
+    <string name="developer_attribution">Developed by Kaylen Travis Pillay</string>
 </resources>
