@@ -26,4 +26,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.ldoublem.loadingview:loadingviewlib:1.0'
     compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.android.gms:play-services-auth:11.8.0'
 }
