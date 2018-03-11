@@ -32,6 +32,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.ldoublem.loadingviewlib.view.LVGearsTwo;
 
 import java.lang.ref.WeakReference;
@@ -51,6 +53,11 @@ import es.dmoral.toasty.Toasty;
     The docs (view link adjacent to library name) for these libraries gives you an
     insight into the use of them and ways in which you can customise the default
     usage within this project.
+
+    DEFAULT:
+    By default the project uses Google SignIn (https://goo.gl/thrZW9) to authenticate
+    and sign up the user to the service. Therefore this activity checks if there is a
+    user already signed in or if no user is logged in.
  */
 public class MainActivity extends Activity {
 
@@ -159,12 +166,26 @@ public class MainActivity extends Activity {
         // The toast that is displayed after loading gives attribution to the
         // original developer and can be removed
 
-        Toasty.info(this
-                , getText(R.string.developer_attribution)
-                ,Toast.LENGTH_SHORT
-                ,true)
-                .show();
+        if(isUserSignedIn()){
+            //TODO: (Development) Move directly to the store activity of the project!
+        }else{
+
+            Toasty.info(this
+                    , getText(R.string.developer_attribution)
+                    ,Toast.LENGTH_SHORT
+                    ,true)
+                    .show();
+
+            //TODO: (Development) Move to the authentication activity of the project
+        }
 
         //TODO: Implement your custom here
+    }
+
+    private boolean isUserSignedIn(){
+        // Check whether there is a signed in user.
+
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        return account != null;
     }
 }
